@@ -32,24 +32,17 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".RouteActivity"
-            android:label="@string/title_activity_route" />
-
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="d7e4e9b781eb5c34c9d7f44e7f78739837ceaedc" />
 
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login">
-            <intent-filter >
+        <activity android:name=".Controller.LoginActivity">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".Controller.RegisterActivity"></activity>
     </application>
 
 </manifest>
