@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "926828697786",
+    "firebase_url": "https://route-helper.firebaseio.com",
+    "project_id": "route-helper",
+    "storage_bucket": "route-helper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926828697786:android:0b341f2c2f8571b6",
+        "android_client_info": {
+          "package_name": "icecoldchris.routehelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926828697786-8gmla8q8l75pfcnara2igmpdo4ruje1v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "icecoldchris.routehelper",
+            "certificate_hash": "6A56533BDE45452B2120C37DF135DEDAE8F9D982"
+          }
+        },
+        {
+          "client_id": "926828697786-0886v12g3d3nvlrdolsguj13617iqf91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0yXwYC0FmvwPFxQjFvYQggLm-a7DEEx0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926828697786-0886v12g3d3nvlrdolsguj13617iqf91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
