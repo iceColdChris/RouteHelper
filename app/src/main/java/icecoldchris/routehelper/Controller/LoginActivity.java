@@ -20,8 +20,6 @@ import icecoldchris.routehelper.R;
 
 public class LoginActivity extends Activity {
 
-    private EditText mUName;
-    private EditText mPWord;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -70,11 +68,10 @@ public class LoginActivity extends Activity {
 
     public void authenticateLogin(View view) {
 
-        mUName = (EditText) findViewById(R.id.email);
-        mPWord = (EditText) findViewById(R.id.password);
-
-        String email = mUName.getText().toString();
-        String password = mPWord.getText().toString();
+        String email = ((EditText)findViewById(R.id.email))
+                .getText().toString();
+        String password =((EditText)findViewById(R.id.password))
+                .getText().toString();
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
