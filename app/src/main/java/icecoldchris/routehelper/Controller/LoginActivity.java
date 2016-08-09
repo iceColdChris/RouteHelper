@@ -93,4 +93,26 @@ public class LoginActivity extends Activity {
                     }
                 });
     }
+
+    public void onForgotPasswordClicked(View view) {
+
+        String email = ((EditText) findViewById(R.id.email))
+                .getText().toString();
+
+        if (!email.isEmpty()) {
+            mAuth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Log.d("RECOVERY:", "Email sent.");
+                                Toast.makeText(LoginActivity.this, "Email Sent!", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+        } else {
+            Toast.makeText(LoginActivity.this, "Please enter your email at least!", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 }

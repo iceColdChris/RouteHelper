@@ -53,7 +53,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/forgot_password"
             android:layout_gravity="center_horizontal"
-            android:text="@string/forgot"/>
+            android:text="@string/forgot"
+            android:onClick="onForgotPasswordClicked"/>
 
     </LinearLayout>
 
