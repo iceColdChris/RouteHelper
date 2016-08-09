@@ -38,9 +38,9 @@ import icecoldchris.routehelper.R;
  * it allows the user to login with their credentials, register a new account,
  * or reset the password for their current account.
  *
- * @author      Chris Fahlin
- * @version     %I%, %G%
- * @since       1.0
+ * @author Chris Fahlin
+ * @version %I%, %G%
+ * @since 1.0
  */
 public class LoginActivity extends Activity {
 
@@ -49,7 +49,7 @@ public class LoginActivity extends Activity {
 
     /**
      * {@inheritDoc}
-     *
+     * <p/>
      * On-top of the original functionality this method will
      * also setup the required Firebase connections.
      */
@@ -81,7 +81,7 @@ public class LoginActivity extends Activity {
 
     /**
      * {@inheritDoc}
-     *
+     * <p/>
      * On-top of the original functionality this method will
      * attach an authentication listener to the activity.
      */
@@ -93,7 +93,7 @@ public class LoginActivity extends Activity {
 
     /**
      * {@inheritDoc}
-     *
+     * <p/>
      * On-top of the original functionality this method will
      * remove the authentication listener from the activity.
      */
@@ -123,9 +123,9 @@ public class LoginActivity extends Activity {
      */
     public void authenticateLogin(View view) {
 
-        String email = ((EditText)findViewById(R.id.email))
+        String email = ((EditText) findViewById(R.id.email))
                 .getText().toString();
-        String password =((EditText)findViewById(R.id.password))
+        String password = ((EditText) findViewById(R.id.password))
                 .getText().toString();
 
         mAuth.signInWithEmailAndPassword(email, password)

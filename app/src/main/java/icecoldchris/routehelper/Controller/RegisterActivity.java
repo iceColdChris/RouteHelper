@@ -39,9 +39,9 @@ import icecoldchris.routehelper.R;
  * new account on the web server, provided they enter a valid email and
  * their passwords match.
  *
- * @author      Chris Fahlin
- * @version     %I%, %G%
- * @since       1.0
+ * @author Chris Fahlin
+ * @version %I%, %G%
+ * @since 1.0
  */
 public class RegisterActivity extends Activity {
 
@@ -50,7 +50,7 @@ public class RegisterActivity extends Activity {
 
     /**
      * {@inheritDoc}
-     *
+     * <p/>
      * On-top of the original functionality this method will
      * also setup the required Firebase connections.
      */
@@ -79,7 +79,7 @@ public class RegisterActivity extends Activity {
 
     /**
      * {@inheritDoc}
-     *
+     * <p/>
      * On-top of the original functionality this method will
      * attach an authentication listener to the activity.
      */
@@ -91,7 +91,7 @@ public class RegisterActivity extends Activity {
 
     /**
      * {@inheritDoc}
-     *
+     * <p/>
      * On-top of the original functionality this method will
      * remove the authentication listener from the activity.
      */
@@ -110,16 +110,16 @@ public class RegisterActivity extends Activity {
      * a new user on the web server.
      */
     public void onRegister(View view) {
-        String email = ((EditText)findViewById(R.id.reg_email))
+        String email = ((EditText) findViewById(R.id.reg_email))
                 .getText().toString();
-        String password =((EditText)findViewById(R.id.reg_password))
+        String password = ((EditText) findViewById(R.id.reg_password))
                 .getText().toString();
-        String confirmPassword =((EditText)findViewById(R.id.reg_confirm_password))
+        String confirmPassword = ((EditText) findViewById(R.id.reg_confirm_password))
                 .getText().toString();
 
 
-        if(isValidEmail(email)) /* Check to make sure the user enters a valid email */ {
-            if(password.equals(confirmPassword)) /* Check to make sure the user entered the same passwords. */{
+        if (isValidEmail(email)) /* Check to make sure the user enters a valid email */ {
+            if (password.equals(confirmPassword)) /* Check to make sure the user entered the same passwords. */ {
 
                 mAuth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -137,10 +137,10 @@ public class RegisterActivity extends Activity {
                             }
                         });
 
-            }else/* If the passwords don't match. */{
+            } else/* If the passwords don't match. */ {
                 Toast.makeText(RegisterActivity.this, "Please check that your passwords match!", Toast.LENGTH_SHORT).show();
             }
-        }else/* If the user does not enter a valid email string */ {
+        } else/* If the user does not enter a valid email string */ {
             Toast.makeText(RegisterActivity.this, "Please enter a valid email!", Toast.LENGTH_SHORT).show();
         }
     }
@@ -156,10 +156,11 @@ public class RegisterActivity extends Activity {
 
     /**
      * This will check that the user has entered a valid email.
+     *
      * @param target the email string
      * @return True if the email is valid, False if the email is not valid
      */
-    private  boolean isValidEmail(CharSequence target) {
+    private boolean isValidEmail(CharSequence target) {
         return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 
