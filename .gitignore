@@ -114,6 +114,5 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 app/libs/
-app/src/main/java/
 app/src/main/res/drawable/
 gradle/wrapper/gradle-wrapper.jar
