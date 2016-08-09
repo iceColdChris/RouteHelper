@@ -90,6 +90,7 @@ public class RegisterActivity extends Activity {
                                 } else {
                                     //TODO: Do stuff! Move over to the google maps screen!
                                     System.out.println("User Created!");
+                                    startActivity(new Intent(RegisterActivity.this, RouteActivity.class));
                                 }
 
                             }

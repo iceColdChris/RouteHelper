@@ -88,9 +88,7 @@ public class LoginActivity extends Activity {
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(LoginActivity.this, "Authentication Successful!", Toast.LENGTH_SHORT).show();
-
-                            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                            startActivity(intent);
+                            startActivity(new Intent(LoginActivity.this, RouteActivity.class));
                         }
                     }
                 });
