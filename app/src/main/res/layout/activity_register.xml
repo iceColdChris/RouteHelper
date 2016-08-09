@@ -44,13 +44,15 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/reg_accept"
                 android:text="@string/register"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:onClick="onRegister"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/reg_cancel"
                 android:text="@string/cancel"
-                android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"
+                android:onClick="onCancel"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

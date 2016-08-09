@@ -8,6 +8,7 @@
     <string name="forgot">Forgot</string>
     <string name="title_activity_maps">Map</string>
     <string name="confirm_password">confirm_password</string>
+    <string name="cancel">Cancel</string>
 
 
     <!-- Strings related to login -->
