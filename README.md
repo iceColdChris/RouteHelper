@@ -1,4 +1,4 @@
-# ${1:Project Name}
+# Route Helper
 ## Installation
 - Clone the repository
 - Open in Android Studio
