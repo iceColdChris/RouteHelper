@@ -29,6 +29,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 
 import icecoldchris.routehelper.R;
+import icecoldchris.routehelper.util.RouteUtility;
 
 public class RouteActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -66,11 +67,10 @@ public class RouteActivity extends AppCompatActivity implements OnMapReadyCallba
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng seattle = new LatLng(47, -122);
+        LatLng seattle = RouteUtility.getLocationFromAddress(this, "400 Broad St, Seattle, WA 98109");
+        assert seattle != null;
         mMap.addMarker(new MarkerOptions().position(seattle).title("Marker in Seattle"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(seattle));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(seattle,14));
     }
 
     @Override
