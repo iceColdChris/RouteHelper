@@ -4,4 +4,7 @@
         android:title="About" />
     <item android:id="@+id/help"
         android:title="Help" />
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:onClick="onLogoutClicked"/>
 </menu>
